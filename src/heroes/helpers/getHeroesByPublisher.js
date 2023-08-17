@@ -1,11 +1,12 @@
 import { heroes } from "../data/heroes";
 
-export const getHeroByPublisher = (publisher) => {
+export const getHeroesByPublisher = (publisher) => {
   const validPublishers = ["DC Comics, Marvel Comics"];
 
-  if (!validPublishers.includes(publisher)) {
-    throw new Error(`${publisher} no esta definido`);
+  //Supuestamente esta funcion, es con la condicion negativa en ValidPublishers, pero da un error automatico que no se que es.
+  if (validPublishers.includes(publisher)) {
+    throw new Error("Hola como estas?");
   }
 
-  return heroes.filter((hero) => hero.publisher === publisher);
+  return heroes.filter((heroe) => heroe.publisher === publisher);
 };
