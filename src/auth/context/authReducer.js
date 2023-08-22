@@ -8,13 +8,13 @@ export const authReducer = (state = {}, action) => {
         logged: true,
         name: action.payload,
       };
-      break;
+
     case types.logout:
       return {
         ...state,
         logged: false,
       };
-      break;
+
     default:
       action;
   }
